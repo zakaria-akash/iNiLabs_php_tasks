@@ -61,8 +61,8 @@ $chicken->makeSound(); // Output: Chicken chirps
 
 /*In the context of the above PHP codes, "Polymorphism" is demonstrated as follows:
 
-1. Polymorphism is demonstrated through method overriding, where subclasses (Ant, Cheetah, and Chicken) inherit from a common superclass (Animal) and override the makeSound method to provide their specific sound outputs.
+--Polymorphism is demonstrated through method overriding, where subclasses (Ant, Cheetah, and Chicken) inherit from a common superclass (Animal) and override the makeSound method to provide their specific sound outputs.
 
-2. Despite all objects being created using different subclass types, they are treated uniformly as objects of the superclass Animal.
+--Despite all objects being created using different subclass types, they are treated uniformly as objects of the superclass Animal.
 
-3. When the makeSound method is called on each object, polymorphism ensures that the appropriate overridden method in each subclass is executed, producing different sound outputs for each animal type.*/
+--When the makeSound method is called on each object, polymorphism ensures that the appropriate overridden method in each subclass is executed, producing different sound outputs for each animal type.*/
