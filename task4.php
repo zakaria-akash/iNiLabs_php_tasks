@@ -1,3 +1,8 @@
+/*
+**Task 4: Polymorphism**
+Build a set of animal classes that demonstrate polymorphism by overriding a method for making sounds.
+*/
+
 <?php
 
 // Define a base class named Animal

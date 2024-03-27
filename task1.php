@@ -1,3 +1,8 @@
+/*
+**Task 1: Class Inheritance**
+Create classes to represent geometric shapes, including circles and rectangles. Implement methods for area calculation.
+You can use the provided example code as a reference.
+*/
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,7 +93,7 @@
   // PHP code to handle form submission and calculate area
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if a shape option is selected
-    if (isset ($_POST["shape"])) {
+    if (isset($_POST["shape"])) {
       // Initialize area to 0
       $area = 0;
       // Get the selected shape from the form data
@@ -96,7 +101,7 @@
       // Check if the selected shape is a circle
       if ($shape == "circle") {
         // Check if the radius is provided
-        if (isset ($_POST["radius"])) {
+        if (isset($_POST["radius"])) {
           // Create a new Circle object with the provided radius
           $radius = $_POST["radius"];
           $circle = new Circle($radius);
@@ -107,7 +112,7 @@
       // Check if the selected shape is a rectangle
       if ($shape == "rectangle") {
         // Check if both width and height are provided
-        if (isset ($_POST["width"]) && isset ($_POST["height"])) {
+        if (isset($_POST["width"]) && isset($_POST["height"])) {
           // Create a new Rectangle object with the provided width and height
           $width = $_POST["width"];
           $height = $_POST["height"];

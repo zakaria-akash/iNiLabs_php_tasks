@@ -1,3 +1,17 @@
+/*
+**Task 0: Valid Parentheses
+
+Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+An input string is valid if:
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Implement an algorithm to validate the parentheses efficiently.
+Example:
+Input: "()[]{}"
+Output: true
+Input: "([)]"
+Output: false
+*/
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +34,7 @@
   function isValidParentheses($s)
   {
     // Check if the input string is empty
-    if (empty ($s)) {
+    if (empty($s)) {
       return "Empty Input";
     }
 
@@ -39,7 +53,7 @@
       // If the character is a closing parenthesis
       if (array_key_exists($char, $map)) {
         // Pop the top element from the stack, or '#' if the stack is empty
-        $topElement = empty ($stack) ? '#' : array_pop($stack);
+        $topElement = empty($stack) ? '#' : array_pop($stack);
         // If the popped element is not the corresponding opening parenthesis
         if ($topElement != $map[$char]) {
           // Return false, indicating invalid parentheses
@@ -58,7 +72,7 @@
     // After looping through the entire string, check if the stack is empty
     // If the stack is empty, all opening parentheses have been matched with closing ones
     // Return true if the stack is empty, indicating valid parentheses
-    return empty ($stack) ? "True" : "Invalid Input";
+    return empty($stack) ? "True" : "Invalid Input";
   }
 
   // Check if the request method is POST

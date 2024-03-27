@@ -1,3 +1,9 @@
+/*
+**Task 2: Interface Implementation**
+Develop a logging system using interfaces. Create classes that implement a logging interface and demonstrate their
+usage.
+*/
+
 <?php
 // Define the database connection parameters
 $host = 'localhost'; // Assuming MySQL is running on the same server
