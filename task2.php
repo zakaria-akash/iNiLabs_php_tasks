@@ -101,13 +101,19 @@ try {
   echo "Connection failed: " . $e->getMessage();
 }
 
-/*Encapsulation in object-oriented programming is the concept of bundling the data (attributes) and methods (functions) that operate on the data into a single unit, called a class. It allows the internal state of an object to be accessed and modified only through well-defined interfaces (methods), while hiding the implementation details from the outside world. In the context of the above PHP codes, encapsulation is demonstrated as follows:
+/*Encapsulation in object-oriented programming is the concept of bundling the data (attributes) and methods (functions) that operate on the data into a single unit, called a class. It allows the internal state of an object to be accessed and modified only through well-defined interfaces (methods), while hiding the implementation details from the outside world. 
+An interface in OOP defines a contract specifying a set of methods that a class implementing the interface must provide, without specifying the implementation details.
+In the context of the above PHP codes, encapsulation and interface is demonstrated as follows:
 
   1. Private Properties: In both the FileLogger and DatabaseLogger classes, properties like $logFile and $pdo are declared as private. This means these properties are only accessible within their respective classes and cannot be directly accessed or modified from outside.
   
   2. Constructor: The constructor method (__construct) in both classes is used to initialize the private properties ($logFile and $pdo). This ensures that these properties are properly initialized when an object of the class is created.
   
   3. Public Methods: The log() method in both classes is declared as public, meaning it can be accessed from outside the class. This method provides an interface for external code to interact with the class. However, the actual implementation details (such as file handling or database operations) are hidden within the class.
+
+  4. Interface: The Logger interface defines a contract specifying that any class implementing it must provide a log() method. This ensures that any class adhering to this interface will have a consistent way of logging messages, regardless of its internal implementation.
+
+  5. Error Handling: Error handling is performed within the class methods (log()). If an error occurs during file writing or database operations, appropriate error messages are displayed. This encapsulates error handling logic within the class, keeping it separate from the main application logic.
   
   
   In summary, encapsulation in these PHP codes ensures that the internal workings of the FileLogger and DatabaseLogger classes are hidden from the outside, allowing them to be used securely and providing a clear and consistent interface for logging messages.
