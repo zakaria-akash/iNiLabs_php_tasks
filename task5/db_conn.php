@@ -1,5 +1,17 @@
 <?php
 
+// Craete a MySql Database in PHPMyAdmin of the XAMPP server named as "to_do_list"
+
+/*under the database "to_do_list" create a table named "todos" with the following command:
+CREATE TABLE `todos` (
+  `id` int(11) NOT NULL,
+  `title` text NOT NULL,
+  `date_time` datetime NOT NULL DEFAULT current_timestamp(),
+  `checked` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=latin1; */
+
+//Make sure that the XAMPP server credentials are as follows:
+
 $sName = "localhost"; // Define the server name where the database is hosted
 
 $uName = "root"; // Define the username used to connect to the database
