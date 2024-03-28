@@ -1,3 +1,8 @@
+<!-- Task 5: To-Do Module** (Mandatory)
+Develop a simple To-do crud module using Laravel Framework. Use VueJs for the view rendering (Optional), that will be a
+huge advantage for you as currently we are working with SPA in our company. If you do not know VueJs, then its ok to use
+blade view rending for the module -->
+
 <?php
 require 'db_conn.php';
 ?>
@@ -77,6 +82,26 @@ require 'db_conn.php';
           (data) => {
             if (data) {
               $(this).parent().hide(600);
+            }
+          }
+        );
+      });
+
+      $(".check-box").click(function (e) {
+        const id = $(this).attr('data-todo-id');
+
+        $.post('app/check.php',
+          {
+            id: id
+          },
+          (data) => {
+            if (data != 'error') {
+              const h2 = $(this).next();
+              if (data === '1') {
+                h2.removeClass('checked');
+              } else {
+                h2.addClass('checked');
+              }
             }
           }
         );
