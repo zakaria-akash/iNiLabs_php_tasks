@@ -1,5 +1,5 @@
 body {
-  background: #34495e;
+  background: #013220;
 }
 
 * {
@@ -12,9 +12,14 @@ body {
   background: transparent;
   max-width: 500px;
   width: 90%;
-  height: 500px;
+  height: fit-content;
   margin: 30px auto;
   border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .add-section {
@@ -43,25 +48,33 @@ body {
   margin: 0px auto;
   border: none;
   outline: none;
-  background: #0088ff;
+  background: #0b714c;
   color: #fff;
   font-family: sans-serif;
   font-size: 16px;
+  font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .add-section button:hover {
   box-shadow: 0 2px 2px 0 #ccc, 0 2px 3px 0 #ccc;
-  opacity: 0.7;
+  opacity: 0.9;
+  background-color: #013220;
 }
 
 .add-section button span {
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 50%;
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+
+  margin: auto;
 }
 
 #errorMes {
@@ -113,8 +126,11 @@ body {
   float: right;
   width: 20px;
   height: 20px;
+  margin: auto;
+  color: #111;
   font-family: sans-serif;
-  color: rgb(139, 97, 93);
+  font-size: 16px;
+  font-weight: 700;
   text-decoration: none;
   text-align: right;
   padding: 0px 5px 8px 0px;
@@ -124,7 +140,7 @@ body {
 }
 
 .remove-to-do:hover {
-  background: rgb(139, 97, 93);
+  background-color: #013220;
   color: #fff;
 }
 
